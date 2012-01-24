@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>Gemfile</string>
+		<string>gemspec</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>/\*\*|\{\s*$</string>

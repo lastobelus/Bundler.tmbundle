@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>s.add_dependency "${1:gem}"${2:, "${3:~&gt;} ${4:VERSION}"}</string>
+	<key>name</key>
+	<string>s.add_dependency "gem", "~&gt; VERSION"</string>
+	<key>tabTrigger</key>
+	<string>gsad</string>
+	<key>uuid</key>
+	<string>0EE086B0-5510-4CEA-90F4-FDBA30EF0D37</string>
+</dict>
+</plist>
