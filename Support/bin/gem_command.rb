@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -W
 
 $:.unshift(File.dirname(__FILE__) + "/../lib")
 $:.push(File.join(ENV['TM_SUPPORT_PATH'], 'lib')) if ENV['TM_SUPPORT_PATH']
@@ -15,7 +15,7 @@ if gem_name = TextMate::UI.request_string(:title => 'Enter gem name:', :default 
   end
   if gem_spec = gem_specs.sort.last # [#<Gem::Specification name=awesome_print version=0.4.0>]
     unless gem_spec.files.select { |f| f =~ /^lib\/#{gem_name}\.rb$/}.size == 1
-      load_files = gem_spec.files.select { |f| f =~ /^lib\/([\w_\-]+)\.rb$/}
+      load_files = gem_spec.files.select { |f| f =~ /^lib\/([\w\-]+)\.rb$/}
       if load_files && load_files.first =~ /lib\/(.*)\.rb/
         requirement = ", :require => '#{$1}'" if $1 != gem_name
       end
